@@ -16,7 +16,26 @@
 
 本專案開發時使用的 SPM12 安裝路徑為：C:\Program Files\MATLAB\R2026a\toolbox\spm12
 
-請記得改專案的各個路徑名稱
+請準備好JHU_MNI_SS_WMPM_Type-II.nii圖譜
+```
 
+## 請記得改專案的各個路徑名稱
+```
+% python路徑
+pyenv("Version", "anaconda的python路徑");
+
+% predict 路徑
+exe = "nnUNetv2_predict.exe的路徑";
+
+% 模型路徑
+setenv("nnUNet_raw", "nnUNet_raw資料夾的路徑");
+setenv("nnUNet_preprocessed", "nnUNet_preprocessed資料夾的路徑");
+setenv("nnUNet_results", "nnUNet_results資料夾的路徑");
+% setenv("CUDA_VISIBLE_DEVICES", "");
+
+% SPM 程式路徑
+segment = load('MNI_way\segment_job.mat的路徑');
+normalize = load('MNI_way\normalize_job.mat的路徑');
+atlas_file = 'JHU_MNI_SS_WMPM_Type-II.nii的路徑';
 ```
 
